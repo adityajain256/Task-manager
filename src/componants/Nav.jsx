@@ -72,17 +72,7 @@ function Nav() {
           >
             <img src={github} alt="GitHub" className="w-7 h-7" />
           </a>
-          {/* <button
-            className="ml-4 rounded-full px-3 py-1 border border-gray-400 text-sm"
-            onClick={() => setDark((d) => !d)}
-            aria-label="Toggle theme"
-            style={{
-              background: dark ? "#23272F" : "#fff",
-              color: theme.text,
-            }}
-          >
-            {dark ? "🌞" : "🌙"}
-          </button> */}
+
         </nav>
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center">
@@ -121,20 +111,7 @@ function Nav() {
               >
                 <img src={github} alt="GitHub" className="w-7 h-7" />
               </a>
-              {/* <button
-                className="rounded-full px-3 py-1 border border-gray-400 text-sm w-full text-left"
-                onClick={() => {
-                  setDark((d) => !d);
-                  setMenuOpen(false);
-                }}
-                aria-label="Toggle theme"
-                style={{
-                  background: dark ? "#23272F" : "#fff",
-                  color: theme.text,
-                }}
-              >
-                {dark ? "🌞 Light Mode" : "🌙 Dark Mode"}
-              </button> */}
+
             </div>
           )}
         </div>
