@@ -1,5 +1,3 @@
-
-
 // import "/Users/adityajain/my/Hackathon/Task-manager/Task/src/App.css";
 // import bin from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/bin.svg";
 // import React, { useState } from "react";
@@ -210,6 +208,13 @@ function Front() {
     return localStorage.getItem("theme") === "dark";
   });
 
+  // Listen for theme changes from other tabs/components
+  useEffect(() => {
+    const syncTheme = () => setDark(localStorage.getItem("theme") === "dark");
+    window.addEventListener("storage", syncTheme);
+    return () => window.removeEventListener("storage", syncTheme);
+  }, []);
+
   // Task state
   const [tasks, setTasks] = useState(() => {
     const saved = localStorage.getItem("tasks");
@@ -333,7 +338,7 @@ function Front() {
       {showMain && (
         <div className="flex flex-col items-center w-full min-h-screen transition-all duration-700">
           {/* Theme toggle */}
-          <div className="fixed top-6 right-6 z-50">
+          <div className="fixed top-4 right-6 z-50">
             <button
               className="rounded-full px-4 py-2 border border-gray-400 text-sm bg-opacity-80"
               style={{
@@ -425,7 +430,7 @@ function Front() {
             <div className="overflow-x-auto rounded-2xl shadow-lg">
               <table className="min-w-full text-base">
                 <thead>
-                  <tr style={{ background: theme.tableHead }}>
+                  <tr style={{ background: theme.tableHead, }}>
                     <th className="px-5 py-3 text-lg font-semibold text-left" style={{ color: theme.text }}>
                       Task
                     </th>

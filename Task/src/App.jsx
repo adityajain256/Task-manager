@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import Nav from './componants/Nav'
-import Verticalnav from './componants/Verticalnav'
+// import Verticalnav from './componants/Verticalnav'
 import Front from './componants/Front'
 // import Tasks from './componants/Tasks'
 
