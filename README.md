@@ -1,12 +1,33 @@
-# React + Vite
+# 📋 Priority Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**A simple and intuitive Task Manager web app that helps you stay organized and productive by prioritizing tasks based on urgency and importance.**
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ **Add Tasks** with custom titles and priorities.
+- ⏰ **Set Due Dates** (optional) to keep track of deadlines.
+- 📊 **Auto-Prioritize Tasks** based on the priority level you provide.
+- ✔️ **Mark Tasks as Complete** by checking the checkbox — completed tasks move to the bottom.
+- 🗑️ **Delete Tasks** when they are no longer needed.
 
-## Expanding the ESLint configuration
+## 🛠️ How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- When adding a task, **priority is required** (e.g., High, Medium, Low).
+- **Due date is optional** — add it only if you want a visual reminder.
+- The app will **automatically sort tasks** so your most important ones stay at the top.
+- Completed tasks move to the bottom of the list, helping you focus on what’s left.
+
+## 🎯 Why Use This App?
+
+- Organize your day based on what matters most.
+- Focus better with a clear, prioritized to-do list.
+- Boost your **productivity** by visually tracking progress and deadlines.
+
+## 🖥️ Tech Stack
+
+- HTML
+- CSS
+- React.js
+- Tailwind Css
+
+
