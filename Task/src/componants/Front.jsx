@@ -1,10 +1,8 @@
-
-
-import "/Users/adityajain/my/Hackathon/Task-manager/Task/src/App.css";
-import bin from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/bin.svg";
+import "../App.css";
+import bin from "../assets/bin.svg";
 import React, { useState, useEffect } from "react";
-import cross from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/cross-circle.svg";
-import check from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/check-circle.svg";
+import cross from "../assets/cross-circle.svg";
+import check from "../assets/check-circle.svg";
 
 
 

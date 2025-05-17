@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import "../App.css";
 import insta from "../assets/instagram.svg";
@@ -109,23 +107,19 @@ function Nav() {
                 href="https://instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:scale-105 transition-transform"
                 aria-label="Instagram"
-                onClick={() => setMenuOpen(false)}
+                className="hover:scale-110 transition-transform bg-amber-50 px-2 py-1.5 rounded-xl"
               >
-                <img src={insta} alt="Instagram" className="w-6 h-6" />
-                <span>Instagram</span>
+                <img src={insta} alt="Instagram" className="w-7 h-7" />
               </a>
               <a
                 href="https://github.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:scale-105 transition-transform"
                 aria-label="GitHub"
-                onClick={() => setMenuOpen(false)}
+                className="hover:scale-110 transition-transform mr-16 bg-amber-50 px-2 py-1.5 rounded-xl"
               >
-                <img src={github} alt="GitHub" className="w-6 h-6" />
-                <span>GitHub</span>
+                <img src={github} alt="GitHub" className="w-7 h-7" />
               </a>
               {/* <button
                 className="rounded-full px-3 py-1 border border-gray-400 text-sm w-full text-left"
