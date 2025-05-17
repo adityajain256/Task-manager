@@ -10,6 +10,8 @@
 - 📊 **Auto-Prioritize Tasks** based on the priority level you provide.
 - ✔️ **Mark Tasks as Complete** by checking the checkbox — completed tasks move to the bottom.
 - 🗑️ **Delete Tasks** when they are no longer needed.
+- **Progress bar** Increasing according to your progress. 
+- **Theme Toggling** You can change theme accordingly. 
 
 ## 🛠️ How It Works
 
