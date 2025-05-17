@@ -4,10 +4,6 @@ import React, { useState, useEffect } from "react";
 import cross from "../assets/cross-circle.svg";
 import check from "../assets/check-circle.svg";
 
-
-
-
-
 // Color palettes
 const lightTheme = {
   background: "#F5F7FA",
@@ -66,7 +62,10 @@ function Front() {
 
   // Add task handler
   const handleAdd = () => {
-    if (!taskInput.trim() || !["high", "medium", "low"].includes(priorityInput)) {
+    if (
+      !taskInput.trim() ||
+      !["high", "medium", "low"].includes(priorityInput)
+    ) {
       alert("Please enter a task and select a valid priority.");
       return;
     }
@@ -103,7 +102,9 @@ function Front() {
 
   // Progress calculation
   const completed = tasks.filter((t) => t.checked).length;
-  const progress = tasks.length ? Math.round((completed / tasks.length) * 100) : 0;
+  const progress = tasks.length
+    ? Math.round((completed / tasks.length) * 100)
+    : 0;
 
   // Theme
   const theme = dark ? darkTheme : lightTheme;
@@ -140,7 +141,9 @@ function Front() {
               Welcome to TaskFlow
             </h1>
             <p className="text-lg md:text-2xl mb-8 text-center max-w-xl animate-fade-in">
-              Organize your day, prioritize what matters, and track your progress with a beautiful, minimalist, and responsive task manager.
+              Organize your day, prioritize what matters, and track your
+              progress with a beautiful, minimalist, and responsive task
+              manager.
             </p>
             <button
               className="bg-gradient-to-r from-blue-500 to-green-400 hover:from-green-400 hover:to-blue-500 text-white px-8 py-3 rounded-full text-xl font-semibold shadow-lg transition-all duration-300 animate-pulse"
@@ -188,7 +191,10 @@ function Front() {
               border: `1.5px solid ${theme.accent}22`,
             }}
           >
-            <h1 className="mb-6 text-3xl font-bold text-center" style={{ color: theme.accent }}>
+            <h1
+              className="mb-6 text-3xl font-bold text-center"
+              style={{ color: theme.accent }}
+            >
               Add a Task
             </h1>
             <div className="flex flex-col md:flex-row gap-3 w-full">
@@ -199,7 +205,10 @@ function Front() {
                 placeholder="Write your task..."
                 value={taskInput}
                 onChange={(e) => setTaskInput(e.target.value)}
-                style={{ color: theme.text, background: dark ? "#23272F" : "#F3F4F6" }}
+                style={{
+                  color: theme.text,
+                  background: dark ? "#23272F" : "#F3F4F6",
+                }}
               />
               <input
                 id="date"
@@ -207,14 +216,20 @@ function Front() {
                 className="h-12 rounded-2xl bg-gray-100 px-4 text-base outline-none focus:ring-2 focus:ring-blue-400"
                 value={dateInput}
                 onChange={(e) => setDateInput(e.target.value)}
-                style={{ color: theme.text, background: dark ? "#23272F" : "#F3F4F6" }}
+                style={{
+                  color: theme.text,
+                  background: dark ? "#23272F" : "#F3F4F6",
+                }}
               />
               <select
                 id="priority"
                 className="h-12 rounded-2xl bg-gray-100 px-4 text-base outline-none focus:ring-2 focus:ring-blue-400"
                 value={priorityInput}
                 onChange={(e) => setPriorityInput(e.target.value)}
-                style={{ color: theme.text, background: dark ? "#23272F" : "#F3F4F6" }}
+                style={{
+                  color: theme.text,
+                  background: dark ? "#23272F" : "#F3F4F6",
+                }}
               >
                 <option value="priority">Priority</option>
                 <option value="high">High</option>
@@ -234,14 +249,23 @@ function Front() {
           {/* Progress Bar */}
           <div className="w-full max-w-2xl mb-8 px-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-base font-medium" style={{ color: theme.text }}>
+              <span
+                className="text-base font-medium"
+                style={{ color: theme.text }}
+              >
                 Progress
               </span>
-              <span className="text-base font-semibold" style={{ color: theme.accent }}>
+              <span
+                className="text-base font-semibold"
+                style={{ color: theme.accent }}
+              >
                 {progress}%
               </span>
             </div>
-            <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700" style={{ background: dark ? "#23272F" : "#E3E8EE" }}>
+            <div
+              className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700"
+              style={{ background: dark ? "#23272F" : "#E3E8EE" }}
+            >
               <div
                 className="h-4 rounded-full transition-all duration-500"
                 style={{
@@ -257,17 +281,29 @@ function Front() {
             <div className="overflow-x-auto rounded-2xl shadow-lg">
               <table className="min-w-full text-base">
                 <thead>
-                  <tr style={{ background: theme.tableHead, }}>
-                    <th className="px-5 py-3 text-lg font-semibold text-left" style={{ color: theme.text }}>
+                  <tr style={{ background: theme.tableHead }}>
+                    <th
+                      className="px-5 py-3 text-lg font-semibold text-left"
+                      style={{ color: theme.text }}
+                    >
                       Task
                     </th>
-                    <th className="px-5 py-3 text-lg font-semibold text-left" style={{ color: theme.text }}>
+                    <th
+                      className="px-5 py-3 text-lg font-semibold text-left"
+                      style={{ color: theme.text }}
+                    >
                       Due Date
                     </th>
-                    <th className="px-5 py-3 text-lg font-semibold text-left" style={{ color: theme.text }}>
+                    <th
+                      className="px-5 py-3 text-lg font-semibold text-left"
+                      style={{ color: theme.text }}
+                    >
                       Status
                     </th>
-                    <th className="px-5 py-3 text-lg font-semibold text-left" style={{ color: theme.text }}>
+                    <th
+                      className="px-5 py-3 text-lg font-semibold text-left"
+                      style={{ color: theme.text }}
+                    >
                       Action
                     </th>
                   </tr>
@@ -275,69 +311,95 @@ function Front() {
                 <tbody>
                   {tasks.length === 0 && (
                     <tr>
-                      <td colSpan={4} className="text-center py-6 text-lg" style={{ color: theme.text }}>
+                      <td
+                        colSpan={4}
+                        className="text-center py-6 text-lg"
+                        style={{ color: theme.text }}
+                      >
                         No tasks yet.
                       </td>
                     </tr>
                   )}
-                  {tasks.map((task) => (
-                    <tr
-                      key={task.id}
-                      className="transition-all duration-300"
-                      style={{
-                        background: task.checked ? theme.checked : "transparent",
-                        color: task.checked ? "#222" : theme.text,
-                        fontWeight: task.priority === "high" ? "bold" : "normal",
-                        opacity: task.checked ? 0.7 : 1,
-                      }}
-                    >
-                      <td className="px-5 py-4">{task.text}</td>
-                      <td className="px-5 py-4">
-                        {task.date ? task.date : <span className="italic text-gray-400">No due date</span>}
-                      </td>
-                      <td className="px-5 py-4">
-                        <span
-                          className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                            task.checked
-                              ? "bg-green-200 text-green-800"
-                              : "bg-yellow-100 text-yellow-800"
-                          }`}
-                        >
-                          {task.checked ? "Completed" : "Pending"}
-                        </span>
-                      </td>
-                      <td className="px-5 py-4 flex gap-2">
-                        <button
-                          id="check"
-                          onClick={() => handleCheck(task.id)}
-                          aria-label="Check"
-                          className="focus:outline-none"
-                        >
-                          <img
-                            src={task.checked ? cross : check}
-                            alt="status"
-                            className="bg-white px-2 py-1 rounded-xl mx-1 shadow"
-                            style={{
-                              filter: task.checked ? "grayscale(0.5)" : "none",
-                              transition: "filter 0.2s",
-                            }}
-                          />
-                        </button>
-                        <button
-                          id="delete"
-                          onClick={() => handleDelete(task.id)}
-                          aria-label="Delete"
-                          className="focus:outline-none"
-                        >
-                          <img
-                            src={bin}
-                            alt="delete"
-                            className="bg-white px-2 py-1 rounded-xl shadow"
-                          />
-                        </button>
-                      </td>
-                    </tr>
-                  ))}
+                  {[...tasks]
+                    .sort((a, b) => {
+                      // Pending tasks first, then completed
+                      if (a.checked === b.checked) {
+                        // If both are same status, keep priority order
+                        return (
+                          priorityOrder[a.priority] - priorityOrder[b.priority]
+                        );
+                      }
+                      return a.checked ? 1 : -1;
+                    })
+                    .map((task) => (
+                      <tr
+                        key={task.id}
+                        className="transition-all duration-300"
+                        style={{
+                          background: task.checked
+                            ? theme.checked
+                            : "transparent",
+                          color: task.checked ? "#222" : theme.text,
+                          fontWeight:
+                            task.priority === "high" ? "bold" : "normal",
+                          opacity: task.checked ? 0.7 : 1,
+                        }}
+                      >
+                        <td className="px-5 py-4">{task.text}</td>
+                        <td className="px-5 py-4">
+                          {task.date ? (
+                            task.date
+                          ) : (
+                            <span className="italic text-gray-400">
+                              No due date
+                            </span>
+                          )}
+                        </td>
+                        <td className="px-5 py-4">
+                          <span
+                            className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                              task.checked
+                                ? "bg-green-200 text-green-800"
+                                : "bg-yellow-100 text-yellow-800"
+                            }`}
+                          >
+                            {task.checked ? "Completed" : "Pending"}
+                          </span>
+                        </td>
+                        <td className="px-5 py-4 flex gap-2">
+                          <button
+                            id="check"
+                            onClick={() => handleCheck(task.id)}
+                            aria-label="Check"
+                            className="focus:outline-none"
+                          >
+                            <img
+                              src={task.checked ? cross : check}
+                              alt="status"
+                              className="bg-white px-2 py-1 rounded-xl mx-1 shadow"
+                              style={{
+                                filter: task.checked
+                                  ? "grayscale(0.5)"
+                                  : "none",
+                                transition: "filter 0.2s",
+                              }}
+                            />
+                          </button>
+                          <button
+                            id="delete"
+                            onClick={() => handleDelete(task.id)}
+                            aria-label="Delete"
+                            className="focus:outline-none"
+                          >
+                            <img
+                              src={bin}
+                              alt="delete"
+                              className="bg-white px-2 py-1 rounded-xl shadow"
+                            />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
                 </tbody>
               </table>
             </div>
