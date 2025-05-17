@@ -1,53 +1,53 @@
-import "/Users/adityajain/my/Hackathon/Task-manager/Task/src/App.css";
-import bin from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/bin.svg"
-import React from "react";
-import cross from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/cross-circle.svg"
-import check from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/check-circle.svg"
+// import "/Users/adityajain/my/Hackathon/Task-manager/Task/src/App.css";
+// import bin from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/bin.svg"
+// import React from "react";
+// import cross from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/cross-circle.svg"
+// import check from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/check-circle.svg"
 
-function Tasks() {
-    let arr= {
-        task: [],
-        date: [],
-    }
-    const addBtn = document.querySelector('#add');
-    const taskInp = document.querySelector('#task');
-    const priority = dosument.querySelector('#date');
 
-  return (
-    <>
-      <div className="flex flex-col justify-center items-center w-full h-screen bg-black text-white">
-        <h1 className="text-3xl md:text-7xl">Tasks</h1>
-        <table>
+// function Tasks() {
+//     let arr= {
+//         task: [],
+//         date: [],
+//     }
+    
+//     return (
+//       <>
+      
+    
+//       <div className="flex flex-col justify-center items-center w-full h-screen bg-black text-white">
+//         <h1 className="text-3xl md:text-7xl">Tasks</h1>
+//         <table>
 
-          <tr >
-            <th className="w-fit px-5 py-3 text-2xl">Task</th>
-            <th className="w-fit px-5 text-2xl">Due Date</th>
-            <th className="w-fit px-5 text-2xl">Status</th>
-            <th className="w-fit px-5 text-2xl">Action</th>
+//           <tr >
+//             <th className="w-fit px-5 py-3 text-2xl">Task</th>
+//             <th className="w-fit px-5 text-2xl">Due Date</th>
+//             <th className="w-fit px-5 text-2xl">Status</th>
+//             <th className="w-fit px-5 text-2xl">Action</th>
   
-          </tr>
-          <tr>
-            <td className="w-fit px-5">Due Date</td>
-            <td className="w-fit px-5">Due Date</td>
-            <td className="w-fit px-5">Pending</td>
+//           </tr>
+//           <tr>
+//             <td className="w-fit px-5">Due Date</td>
+//             <td className="w-fit px-5">Due Date</td>
+//             <td className="w-fit px-5">Pending</td>
 
-            <td className="w-fit px-5"> 
-                <button>
-                    <img src={check} alt="a" className="bg-white px-2 py-1 rounded-xl mx-1"/>
-                </button>
-                <button>
-                    <img src={bin} alt="a" className="bg-white px-2 py-1 rounded-xl"/>
-                </button>
-            </td>
-          </tr>
+//             <td className="w-fit px-5"> 
+//                 <button>
+//                     <img src={check} alt="a" className="bg-white px-2 py-1 rounded-xl mx-1"/>
+//                 </button>
+//                 <button>
+//                     <img src={bin} alt="a" className="bg-white px-2 py-1 rounded-xl"/>
+//                 </button>
+//             </td>
+//           </tr>
            
-        </table>
-      </div>
-    </>
-  );
-}
+//         </table>
+//       </div>
+//     </>
+//   );
+// }
 
-export default Tasks;
+// export default Tasks;
 
 // import React, { useState } from 'react';
 
