@@ -1,5 +1,5 @@
 import "../App.css";
-import profie from '/Users/adityajain/my/Hackathon/task-manager/src/assets/profile.svg'
+import profie from '..assets/profile.svg'
 import insta from "../assets/instagram.svg";
 import github from "../assets/github.svg";
 
