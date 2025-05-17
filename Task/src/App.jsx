@@ -1,25 +1,15 @@
-import { useState } from 'react'
-
-import './App.css'
-import Nav from './componants/Nav'
-// import Verticalnav from './componants/Verticalnav'
-import Front from './componants/Front'
-// import Tasks from './componants/Tasks'
+import React from "react";
+import Nav from "./componants/Nav";
+import Front from "./componants/Front";
 
 function App() {
-  return(
-    <>
-
+  return (
+    <div style={{ minHeight: "100vh", position: "relative", overflow: "hidden" }}>
+      
       <Nav />
-      {/* <div className='flex flex-col md:flex-row'>
-      <Verticalnav/>
-
-      </div> */}
-
-      <Front/>
-      {/* <Tasks /> */}
-    </>
-  )
+      <Front />
+    </div>
+  );
 }
 
-export default App
+export default App;

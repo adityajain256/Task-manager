@@ -6,6 +6,10 @@ import React, { useState, useEffect } from "react";
 import cross from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/cross-circle.svg";
 import check from "/Users/adityajain/my/Hackathon/Task-manager/Task/src/assets/check-circle.svg";
 
+
+
+
+
 // Color palettes
 const lightTheme = {
   background: "#F5F7FA",
