@@ -1,3 +1,4 @@
+<img width="1466" alt="Screenshot 2025-05-17 at 10 08 41 PM" src="https://github.com/user-attachments/assets/67dce090-27f2-42d5-a272-2c4ea839fd29" />
 # 📋 Priority Task Manager
 
 **A simple and intuitive Task Manager web app that helps you stay organized and productive by prioritizing tasks based on urgency and importance.**
@@ -30,4 +31,7 @@
 - React.js
 - Tailwind Css
 
+
+<img width="1466" alt="Screenshot 2025-05-17 at 10 08 55 PM" src="https://github.com/user-attachments/assets/303a8413-70f8-4845-b8d6-46649aa69baf" />
+<img width="1466" alt="Screenshot 2025-05-17 at 10 08 49 PM" src="https://github.com/user-attachments/assets/92f7c94f-e26b-40da-b946-873f70ffb224" />
 
